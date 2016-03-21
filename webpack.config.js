@@ -2,12 +2,12 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  
+
   context: __dirname,
 
-  entry: [
-    './src/index.js'
-  ],
+  entry: {
+    js: './src/index.js'
+  },
 
   output: {
     path: path.join(__dirname, 'public'),
@@ -16,21 +16,25 @@ module.exports = {
   },
 
   module: {
-
     loaders: [
-      {
-        test: /\.jsx$/,
-        loaders: ['babel']
-      },
-
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loaders: ['babel']
-      },
-
+      { test: /\.jsx$/, loaders: ['babel-loader'] },
+      { test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'] },
     ]
+  },
 
+  resolveLoader: {
+    modulesDirectories: [
+    'node_modules'
+    ]
+  },
+
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
+
+  stats: {
+    colors: true,
+    reasons: true
   }
 
 }
