@@ -1,8 +1,21 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './components/App/App.jsx';
+import HomePage from './components/HomePage/HomePage.jsx';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import rootReducer from './reducers'
+import Root from './Root'
+
+let store = createStore(rootReducer)
+
+// render(
+//   <HomePage />,
+//   document.getElementById('root')
+// );
 
 render(
-  <App />,
+  <Provider store={store}>
+    <Root/>
+  </Provider>,
   document.getElementById('root')
-);
+)

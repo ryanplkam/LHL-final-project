@@ -1,0 +1,48 @@
+@import '../../global-styles.scss';
+
+.jumbotron-home-page {
+  color: $red;
+  font-family: 'Nevis';
+  padding: 15vh 15px 10vh;
+  @media screen and (max-width: $xs) {
+    text-align: center;
+  }
+  h1 {
+
+  }
+  button {
+    font-family: inherit;
+    margin: 12px 0 0;
+  }
+  input {
+    border: none;
+    padding: 10px;
+    margin: 12px 0;
+  }
+}
+.body-home-page {
+  padding: 20px 0;
+  color: $red;
+  background: $orange;
+  font-family: 'Nevis';
+  font-weight: bold;
+  @media screen and (max-width: $xs) {
+    text-align: center;
+  }
+  img {
+    display: block;
+    height: 500px;
+    margin: 0 auto;
+    @media screen and (max-width: $lg) {
+      height: 350px;
+    }
+    @media screen and (max-width: $md) {
+      height: 250px;
+    }
+  }
+}
+.text-col {
+  @media screen and (min-width: $sm) {
+    float: right;
+  }
+}

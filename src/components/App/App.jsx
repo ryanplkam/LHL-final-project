@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import styles from './App.scss';
+import React, { PropTypes } from 'react'
 
-class App extends Component {
+export default React.createClass({
+
   render() {
-    return (<div className='hello'>Hello world</div>);
-  };
-}
-
-export default App
+    return (
+      <div>
+        {this.props.children}
+      </div>
+    )
+  }
+})

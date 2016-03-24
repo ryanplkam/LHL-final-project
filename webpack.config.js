@@ -1,6 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 
+
+
+
 const devFlagPlugin = new webpack.DefinePlugin({
   __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || 'false'))
 });
@@ -35,6 +38,10 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: 'style-loader!css-loader!sass-loader'
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg|eot|ttf|woff|woff2|otf|ico)(\?v=\d+\.\d+\.\d+)?$/,
+        loaders: ['file']
       }
     ]
   },
@@ -53,7 +60,10 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.css', '.scss'],
+    modulesDirectories: [
+      'node_modules'
+    ]
   },
 
   stats: {
