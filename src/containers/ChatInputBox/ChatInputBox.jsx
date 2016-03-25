@@ -1,5 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { addChatMessage } from '../../actions'
+import $ from 'jquery'
+
+require('./ChatInputBox.scss')
 
 class ChatInputBox extends Component { 
   constructor() {
@@ -12,6 +15,7 @@ class ChatInputBox extends Component {
     if (e.keyCode === 13) {
       this.props.chatEvents.sendMessage(1, e.target.value)
       e.target.value = ''
+      
     }
   }
 
@@ -21,7 +25,7 @@ class ChatInputBox extends Component {
 
   render() {
     return (
-      <div>
+      <div className='chat-input-box-container'>
         <input 
           type='text'
           onKeyUp={this.handleKeyUp}

@@ -4,6 +4,8 @@ import io from 'socket.io-client'
 import ChatMessageBox from '../ChatMessageBox/ChatMessageBox'
 import ChatInputBox from '../ChatInputBox/ChatInputBox'
 import chatEvents from '../../actions/chat'
+import $ from 'jquery'
+import { scrollbar } from 'jquery.scrollbar'
 
 const ChatContainer = React.createClass({
   
@@ -14,6 +16,7 @@ const ChatContainer = React.createClass({
 
   componentDidMount() {
     this.getSocket().getMessages()
+    $('.scrollbar-macosx').scrollbar();
   },
 
   render() { 

@@ -1,6 +1,9 @@
 import React from 'react'
 import $ from 'jquery'
 import ChatContainer from '../ChatContainer/ChatContainer'
+import { Grid, Row, Col } from 'react-bootstrap';
+
+require('./Room.scss');
 
 export default React.createClass({
 
@@ -23,8 +26,19 @@ export default React.createClass({
 
   render() {  
     return (
-      <div>
-        <ChatContainer {...this.props} />
+      <div className='background-room'>
+        <Grid>
+          <Row>
+            <Col lg={8}>
+              <div className='video-container'></div>
+              <div className='playlist-container'></div>
+              
+            </Col>
+            <Col lg={4}>
+              <ChatContainer {...this.props} />
+            </Col>
+          </Row>
+        </Grid>
       </div>
     )
   }

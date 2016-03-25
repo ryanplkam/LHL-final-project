@@ -4,7 +4,7 @@ $red: #F7455B;
 
 $grey-darker: #222324;
 $grey-dark: #69707a;
-$grey: #aeb1b5;
+$grey: #E5E6E6;
 $grey-light: #d3d6db;
 $blue: #42afe3;
 $green: #75E735;
@@ -47,6 +47,9 @@ $xs: 480px;
 // Gloabl styles
 .module {
   padding-top: 20px;
+}
+body {
+  background-color: $orange;
 }
 h1 {
   font-size: $size-1;

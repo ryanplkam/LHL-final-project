@@ -8,11 +8,6 @@ import Root from './Root'
 
 let store = createStore(rootReducer)
 
-// render(
-//   <HomePage />,
-//   document.getElementById('root')
-// );
-
 render(
   <Provider store={store}>
     <Root/>
