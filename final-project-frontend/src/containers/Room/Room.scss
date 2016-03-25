@@ -1,0 +1,22 @@
+@import '../../global-styles.scss';
+
+.background-room {
+  background-color: $orange;
+  height: 100vh;
+}
+
+.col-lg-8, .col-lg-4 {
+  border: 1px solid red;
+}
+
+.video-container {
+  height: 60vh;
+  margin: 2.5vh auto;
+  background-color: $grey;
+} 
+
+.playlist-container {
+  height: 30vh;
+  background-color: $grey;
+  margin: 2.5vh auto;
+}

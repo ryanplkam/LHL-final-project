@@ -15,7 +15,7 @@ router.get('/:roomHash', function(req, res) {
     }]
   })
   .then(function(room) {
-
+    console.log(req)
     res.status(200).json(room.Messages);
   })
   .catch(function(error) {

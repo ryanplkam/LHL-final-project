@@ -14,10 +14,13 @@ module.exports = {
       email: {
         type: Sequelize.STRING
       },
-      password: {
+      profilePicUrl: {
         type: Sequelize.STRING
       },
-      profilePicUrl: {
+      fbId: {
+        type: Sequelize.BIGINT
+      },
+      token: {
         type: Sequelize.STRING
       },
       createdAt: {

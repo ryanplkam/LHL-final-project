@@ -4,8 +4,8 @@ var router = express.Router();
 
 router.post('/', function(req, res) {
   models.Room.findOrCreate({
-    where: { hash: req.body.roomHash },
-    defaults: { userId: req.body.userId }
+    where: {hash: req.body.roomHash},
+    defaults: {userId: req.body.userId}
   })
   .then(function(room) {
     res.status(200).json(room);

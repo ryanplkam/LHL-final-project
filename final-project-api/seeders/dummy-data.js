@@ -16,7 +16,6 @@ module.exports = () => {
     user.push({
       username: 'Anonymous Aardvark',
       email: faker.internet.email(),
-      password: faker.internet.password(),
       profilePicUrl: faker.image.imageUrl(),
       createdAt: faker.date.past(), 
       updatedAt: faker.date.recent()
@@ -24,7 +23,6 @@ module.exports = () => {
     user.push({
       username: 'Anonymous Bear',
       email: faker.internet.email(),
-      password: faker.internet.password(),
       profilePicUrl: faker.image.imageUrl(),
       createdAt: faker.date.past(), 
       updatedAt: faker.date.recent()
@@ -32,7 +30,6 @@ module.exports = () => {
     user.push({
       username: 'Anonymous Cheetah',
       email: faker.internet.email(),
-      password: faker.internet.password(),
       profilePicUrl: faker.image.imageUrl(),
       createdAt: faker.date.past(), 
       updatedAt: faker.date.recent()
@@ -40,7 +37,6 @@ module.exports = () => {
     user.push({
       username: 'Anonymous Elephant',
       email: faker.internet.email(),
-      password: faker.internet.password(),
       profilePicUrl: faker.image.imageUrl(),
       createdAt: faker.date.past(), 
       updatedAt: faker.date.recent()
@@ -48,7 +44,6 @@ module.exports = () => {
     user.push({
       username: 'Anonymous Giraffe',
       email: faker.internet.email(),
-      password: faker.internet.password(),
       profilePicUrl: faker.image.imageUrl(),
       createdAt: faker.date.past(), 
       updatedAt: faker.date.recent()
@@ -56,18 +51,45 @@ module.exports = () => {
     user.push({
       username: 'Anonymous Hippo',
       email: faker.internet.email(),
-      password: faker.internet.password(),
       profilePicUrl: faker.image.imageUrl(),
       createdAt: faker.date.past(), 
       updatedAt: faker.date.recent()
     });
-    
+    user.push({
+      username: 'Anonymous Koala',
+      email: faker.internet.email(),
+      profilePicUrl: faker.image.imageUrl(),
+      createdAt: faker.date.past(), 
+      updatedAt: faker.date.recent()
+    });
+    user.push({
+      username: 'Anonymous Llama',
+      email: faker.internet.email(),
+      profilePicUrl: faker.image.imageUrl(),
+      createdAt: faker.date.past(), 
+      updatedAt: faker.date.recent()
+    });
+    user.push({
+      username: 'Anonymous Mongoose',
+      email: faker.internet.email(),
+      profilePicUrl: faker.image.imageUrl(),
+      createdAt: faker.date.past(), 
+      updatedAt: faker.date.recent()
+    });
+    user.push({
+      username: 'Anonymous Octopus',
+      email: faker.internet.email(),
+      profilePicUrl: faker.image.imageUrl(),
+      createdAt: faker.date.past(), 
+      updatedAt: faker.date.recent()
+    });
+
     for (let i = 0; i < 30; i++) {
       user.push({
         username: faker.internet.userName(),
         email: faker.internet.email(),
-        password: faker.internet.password(),
         profilePicUrl: faker.image.imageUrl(),
+        token: faker.internet.password(),
         createdAt: faker.date.past(), 
         updatedAt: faker.date.recent()
       });
